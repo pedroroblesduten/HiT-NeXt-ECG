@@ -916,7 +916,7 @@ if __name__ == "__main__":
     # --------------------------------------------------------------
     # 1.  Load 128 ECGs straight from the HDF5 file
     # --------------------------------------------------------------
-    h5_path = "/home/ubuntu/DATASETS/code15.h5"  # ← change
+    h5_path = "ecg/path/here.h5"  # ← change
     split = "train"  # "train", "val", or "test"
     batch_size = 8
     seq_len = 2560  # model expects 2560 samples
