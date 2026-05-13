@@ -156,7 +156,7 @@ class GRN(nn.Module):
             torch.Tensor: Transformed tensor with normalized scaling and bias applied.
         """
         Gx = torch.norm(x, p=2, dim=-1, keepdim=True)
-        Nx = Gx / (Gx.mean(dim=-1, keepdim=True) + 1e-6)
+        Nx = Gx / (Gx.mean(dim=1, keepdim=True) + 1e-6)
         return self.gamma * (x * Nx) + self.beta + x
 
 
